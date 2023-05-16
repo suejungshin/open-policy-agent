@@ -35,15 +35,3 @@ user_owns_token { input.user == token.payload.azp }
 token := {"payload": payload} {
     [header, payload, signature] := io.jwt.decode(input.token)
 }
-
-
-allow := true  {
-	input.request.method == "GET"
-	input.request.path == ["users", input.request.user.name]
-}
-
-allow := true  {
-	input.request.method == "GET"
-	input.request.path == ["users", input.request.user.name]
-}
-
