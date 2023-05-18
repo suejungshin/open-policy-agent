@@ -1,4 +1,8 @@
-let input = {}
+let input = {
+    "request": {
+        "path": []
+    }
+}
 
 let allow
 if (input.request.method === "GET" &&
